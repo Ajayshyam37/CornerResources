@@ -1,5 +1,9 @@
+import MUIDrawerLeft from "../../components/LeftNavigation";
+
+const pages = ['InEars', 'PlanningCenter', 'MultiTracks'];
+
 export function BandWelcome(){
     return(
-        <h1>welcome</h1>
+        <MUIDrawerLeft tabs={pages} title="Worship Team"/>
     );
 }

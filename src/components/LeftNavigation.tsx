@@ -17,16 +17,20 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
-
-import { Audio } from '../assets/audio';
+import { Audio } from '../assets/Audio';
 import { Video } from '../assets/Video';
 import { Lights } from '../assets/Lights';
+import { InEars } from '../assets/InEars';
+import { PlanningCenter } from '../assets/PlanningCenter';
+import { MultiTracks } from '../assets/MultiTracks';
+
 import { useEffect } from 'react';
-import { PageDescription, PageHeader, StyledBox, StyledBoxVideo } from './pageStyles';
+import { CenteredTitle, PageDescription, PageHeader, RoundedRectangle, selectedButtonStyles, StyledBox, StyledHeading3, TagsText } from './pageStyles';
+import Grid from '@mui/material/Grid';
 
 const drawerWidth = 240;
-
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
     open?: boolean;
@@ -38,6 +42,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
         duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: `-${drawerWidth}px`,
+    marginTop: 15,
     ...(open && {
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.easeOut,
@@ -79,9 +84,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
 }));
 
-
-
-export default function MUIDrawerLeft(props: string[]) {
+export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
     const [selectedItem, setSelectedItem] = React.useState<string | null>(null);
@@ -89,7 +92,6 @@ export default function MUIDrawerLeft(props: string[]) {
     const [selectedTags, setSelectedTags] = React.useState<string | null>(null);
     const [selectedURL, setSelectedURL] = React.useState<string | null>(null);
     const [selectedPage, setSelectedPage] = React.useState<string | null>(null);
-
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -105,7 +107,7 @@ export default function MUIDrawerLeft(props: string[]) {
         }
     }, []);
 
-    const handleItemClick = (item: { Title: string; Description: string; Tag: string; Url: string; }) => {
+    const handleItemClick = (item: { Title: string; Description: string; Tag: string; Url: string }) => {
         setSelectedItem(item.Title);
         setSelectedDescription(item.Description);
         setSelectedTags(item.Tag);
@@ -114,12 +116,18 @@ export default function MUIDrawerLeft(props: string[]) {
 
     const handlePageClick = (x: string) => {
         setSelectedPage(x);
-        if (x == 'Audio') {
+        if (x === 'Audio') {
             handleItemClick(Audio[0]);
-        } else if (x == 'Video') {
+        } else if (x === 'Video') {
             handleItemClick(Video[0]);
-        } else if (x == 'Lights') {
+        } else if (x === 'Lights') {
             handleItemClick(Lights[0]);
+        } else if (x === 'InEars') {
+            handleItemClick(InEars[0]);
+        } else if (x === 'PlanningCenter') {
+            handleItemClick(PlanningCenter[0]);
+        } else if (x === 'MultiTracks') {
+            handleItemClick(MultiTracks[0]);
         }
     };
 
@@ -131,8 +139,13 @@ export default function MUIDrawerLeft(props: string[]) {
         jsonData = Video;
     } else if (selectedPage === 'Lights') {
         jsonData = Lights;
+    } else if (selectedPage === 'InEars') {
+        jsonData = InEars;
+    } else if (selectedPage === 'PlanningCenter') {
+        jsonData = PlanningCenter;
+    } else if (selectedPage === 'MultiTracks') {
+        jsonData = MultiTracks;
     }
-
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -148,23 +161,36 @@ export default function MUIDrawerLeft(props: string[]) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <h1>Corner Resources</h1>
-                    <StyledBox>
-                        {props.tabs.map((page, index) => (
-                            <Button
-                                key={page}
-                                sx={{
-                                    color: 'black',
-                                    '&:hover': {
-                                        backgroundColor: 'transparent',
-                                    },
-                                }}
-                                onClick={() => handlePageClick(page)}
-                            >
-                                <h4>{page}</h4>
-                            </Button>
-                        ))}
-                    </StyledBox>
+                    <Grid container spacing={0}>
+                        <Grid item xs={12} md={8}>
+                            <StyledHeading3>Corner Resources</StyledHeading3>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <StyledBox>
+                                {props.tabs.map((page, index) => (
+                                    <Button
+                                    variant="text"
+                                        key={page}
+                                        sx={{
+                                            color: 'black',
+                                            backgroundColor: selectedPage === page ? 'rgba(0, 0, 0, 0.1)' : 'transparent',
+                                            height: '40px',
+                                            marginTop:'15px',
+                                            '@media (max-width: 600px)': {
+                                                height: '24px',
+                                                fontSize: '10px',
+                                                margin:'0px'
+                                            },
+                                        }}
+                                        onClick={() => handlePageClick(page)}
+                                    >
+                                        <h4>{page}</h4>
+                                    </Button>
+
+                                ))}
+                            </StyledBox>
+                        </Grid>
+                    </Grid>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -181,20 +207,24 @@ export default function MUIDrawerLeft(props: string[]) {
                 open={open}
             >
                 <DrawerHeader>
+                    <CenteredTitle>{props.title}</CenteredTitle>
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <ListItem key={"Home"} disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary={"Home"} />
+                    <ListItem key={'Home'} disablePadding>
+                        <ListItemButton button component={Link} to="/">
+                            <ListItemText primary={'Home'} />
                         </ListItemButton>
                     </ListItem>
                     {!jsonData || jsonData.map((item) => (
                         <ListItem key={item.Title} disablePadding>
-                            <ListItemButton onClick={() => handleItemClick(item)}>
+                            <ListItemButton
+                                onClick={() => handleItemClick(item)}
+                                style={selectedItem === item.Title ? selectedButtonStyles : {}}
+                            >
                                 <ListItemText primary={item.Title} />
                             </ListItemButton>
                         </ListItem>
@@ -203,17 +233,32 @@ export default function MUIDrawerLeft(props: string[]) {
             </Drawer>
             <Main open={open}>
                 <DrawerHeader />
-                <PageHeader>
-                    {selectedItem}
-                </PageHeader>
-                <Typography paragraph>
-                    {selectedTags}
-                </Typography>
-                <iframe width="70%" height="80%" src={selectedURL} title= {selectedItem} frameborder="25" allow="autoplay; clipboard-write; encrypted-media; gyroscope; fullscreen;"></iframe>
-                <PageDescription>
-                    {selectedDescription}
-                </PageDescription>
+                <Grid container>
+                    <Grid item xs={12} md = {8}>
+                        <PageHeader>
+                            {selectedItem}
+                        </PageHeader>
+                    </Grid>
+                    <Grid item xs={12} md= {4}>
+                        <RoundedRectangle>
+                            <TagsText>{selectedTags}</TagsText>
+                        </RoundedRectangle>
+                    </Grid>
+                </Grid>
 
+                {selectedURL && (
+                    <iframe
+                        width="100%" // Set to 100% to ensure responsiveness
+                        height="450" // Set an appropriate height
+                        src={selectedURL}
+                        title={selectedItem}
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; gyroscope; fullscreen;"
+                    />
+                )}
+                <PageDescription>
+                    <div dangerouslySetInnerHTML={{ __html: selectedDescription }}></div>
+                </PageDescription>
             </Main>
         </Box>
     );

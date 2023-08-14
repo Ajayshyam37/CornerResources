@@ -1,147 +1,40 @@
 export const Video = [
-    {
-      "Title": "How Audio Mixers Work – What is a Mixer & What Does it Do?",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=oXFiXWbj7Jc",
-      "Description": "Test 1 2 3 Video"
-    },
-    {
-      "Title": "Why do you need a mixer?",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=AuNEbYvJvOg",
-      "Description": ""
-    },
-    {
-      "Title": "Digital Mixer vs Analog Mixer – What's the Difference?",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=EZr6M6jE3Iw&t=81s",
-      "Description": ""
-    },
-    {
-      "Title": "Getting Started with QU-32",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=Q9P-Om8UBe4",
-      "Description": ""
-    },
-    {
-      "Title": "Channel Processing on QU-32",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=FdfX2OWymX8",
-      "Description": ""
-    },
-    {
-      "Title": "FX on QU-32",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=wtqDavVlOUc",
-      "Description": ""
-    },
-    {
-      "Title": "Custom Layers and Soft Keys",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=HnFMmO4ayu4",
-      "Description": ""
-    },
-    {
-      "Title": "What is a microphone?",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=PE6Qn4ZiEyo",
-      "Description": ""
-    },
-    {
-      "Title": "Gain Structure",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=1OIbpbJ0Zv4",
-      "Description": ""
-    },
-    {
-      "Title": "What is a DI BOX",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=_xybjiuD9K0",
-      "Description": ""
-    },
-    {
-      "Title": "What is EQ?",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=kaKnHaEOMbc",
-      "Description": ""
-    },
-    {
-      "Title": "Vocal High Pass Filter and EQ Demo",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=hSPfjl6ZSNI",
-      "Description": ""
-    },
-    {
-      "Title": "What is a compressor?",
-      "Tag": "Intermediate",
-      "Url": "https://www.youtube.com/watch?v=543y5bzih1o",
-      "Description": ""
-    },
-    {
-      "Title": "How to use a compressor?",
-      "Tag": "Intermediate",
-      "Url": "https://www.youtube.com/watch?v=BpwCEptKXxg&t=82s",
-      "Description": ""
-    },
-    {
-      "Title": "What is a Gate?",
-      "Tag": "getting started",
-      "Url": "https://www.youtube.com/watch?v=uqlEf1HsA68&t=50s",
-      "Description": ""
-    },
-    {
-      "Title": "How to use a Gate",
-      "Tag": "Intermediate",
-      "Url": "https://www.youtube.com/watch?v=tZbJ9mY17xM",
-      "Description": ""
-    },
-    {
-      "Title": "A Guide to Running Soundcheck",
-      "Tag": "Intermediate",
-      "Url": "https://www.youtube.com/watch?v=EF8HICmp_VI",
-      "Description": ""
-    },
-    {
-      "Title": "Kick Drum Basics",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=-B_ondfHW9o",
-      "Description": ""
-    },
-    {
-      "Title": "Snare Drum Basics",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=Mmpdoq4TCmk",
-      "Description": ""
-    },
-    {
-      "Title": "Electric Guitar Basics",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=lPXNLKz0qqo",
-      "Description": ""
-    },
-    {
-      "Title": "How to eq and compress live vocal",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=KXFPzK6UOgk",
-      "Description": ""
-    },
-    {
-      "Title": "Acoustic Guitar Basics",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=bX4sr9k9Jo8",
-      "Description": ""
-    },
-    {
-      "Title": "Acoustic Guitar Compression",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=76C0TC3XzV0",
-      "Description": ""
-    },
-    {
-      "Title": "LEARN HOW TO MIX ON AN M32 X32 CONSOLE",
-      "Tag": "Advanced",
-      "Url": "https://www.youtube.com/watch?v=e7YgcRl0vDU",
-      "Description": ""
+  {
+    "Title": "What is Pro Presenter?",
+    "Tag": "Getting Started",
+    "Url": "https://www.youtube.com/embed/m1LdbRmJsQI",
+    "Description": "<div>\n  <p>Discover the wonders of Pro Presenter, your key to creating stunning presentations for any music event. Whether you're new to this or a seasoned pro, Pro Presenter makes it easy to dazzle your audience.</p>\n\n  <h3>Create Awesome Presentations:</h3>\n\n  <p>With Pro Presenter, you can make eye-catching presentations that keep your audience hooked. Even if you're not a tech expert, you'll be able to make your show look amazing.</p>\n\n  <h3>Show on Multiple Screens:</h3>\n\n  <p>Share your presentation on different screens at once. No matter where people are watching - on stage, in the crowd, or on a screen - everyone gets to enjoy the show up close.</p>\n\n  <h3>Control How the Story Unfolds:</h3>\n\n  <p>Take charge of your show's story using Pro Presenter. You can control it from a computer, a special device, or even your phone. It's like being the director of your own music production.</p>\n\n  <h3>Add Exciting Videos:</h3>\n\n  <p>Make your show even cooler by adding videos alongside your presentation. You can stream videos to make your performance more dynamic and captivating.</p>\n\n  <h3>Big or Small, It Fits All:</h3>\n\n  <p>Whether you're performing in a cozy space or a huge venue, Pro Presenter is perfect. It adapts to what you need and helps you shine, no matter the size of your event.</p>\n\n  <h3>Your Partner in Production:</h3>\n\n  <p>Step into the world of Pro Presenter, your all-in-one tool for creating fantastic live music experiences. With Pro Presenter, you're in control, and your shows will leave a lasting impression.</p>\n\n  <h3>Stay Tuned for More:</h3>\n\n  <p>Keep an eye on our channel for more tips and tricks with Pro Presenter. We'll help you unlock all the amazing things it can do, so you can create performances that truly stand out.</p>\n</div>"
     }
-  ]
-  
+    ,
+  {
+    "Title": "Configure Screens in Pro Presenter",
+    "Tag": "Getting Started",
+    "Url": "https://www.youtube.com/embed/ROOFKBbvNns",
+    "Description": "<div>\n  <p>Explore the magic of ProPresenter Under 7 and take control of your screen setup effortlessly. Whether you're new to this or just want a smoother process, ProPresenter makes configuring screens a breeze.</p>\n\n  <h3>Setting Up Your Screens:</h3>\n\n  <p>With ProPresenter, you can arrange and manage your screens with ease. Connect as many screens as your computer can handle, from physical displays to network screens. You'll be guided through a simple process to configure them and set them up in advance.</p>\n\n  <h3>Audience and Stage Screens:</h3>\n\n  <p>ProPresenter lets you create different screens for your audience and stage. Audience screens are for the crowd, while stage screens are for those on stage or behind the scenes. You can even have multiple screens for each category.</p>\n\n  <h3>Customize Your Screens:</h3>\n\n  <p>Personalize your screens by naming and adjusting them. Choose your output devices and even configure placeholders for screens you haven't connected yet.</p>\n\n  <h3>Flexible Output Options:</h3>\n\n  <p>ProPresenter supports various output sources, including NDI and Syphon, allowing you to send video across networks or to other programs on your computer. You can also adjust screen ratios and resolutions to fit your needs.</p>\n\n  <h3>Mirrored and Group Screens:</h3>\n\n  <p>Enhance your visual impact by using mirrored screens to send the same output to multiple destinations. Create impressive video walls or ultra-wide setups with group screens, perfect for video walls or wide displays.</p>\n\n  <h3>Edge Blending:</h3>\n\n  <p>Master the art of edge blending for seamless screen transitions. Adjust the blend between screens and create stunning visual effects that captivate your audience.</p>\n\n  <h3>Stage Display Setup:</h3>\n\n  <p>Configure multiple stage displays for those on stage. ProPresenter lets you set up physically connected screens or use NDI or Syphon outputs. You can even view stage screen layouts from the iOS and Android Stage app.</p>\n\n  <h3>Next-Level Control:</h3>\n\n  <p>Unlock the full potential of your presentation with ProPresenter's features. Send different content and looks to various screens using the new announcements layer and looks features.</p>\n\n  <h3>More Tutorials:</h3>\n\n  <p>Stay tuned for additional tutorials on ProPresenter's advanced features, including the announcements layer, looks, image splitters, and edge blending. Visit renewedvision.com/ProTutorial for detailed guides.</p>\n</div>"
+  },
+  {
+    "Title": "Importing New Songs into Pro Presenter",
+    "Tag": "Getting Started",
+    "Url": "https://www.youtube.com/embed/AWCt0eVG6bg",
+    "Description": "<div>\n  <p>Ready to simplify importing lyrics and chord charts for your presentations in ProPresenter? In this tutorial, we'll guide you through the easy steps of using the Multi-Track Search feature and displaying chord charts on your stage screens.</p>\n\n  <h3>Importing Lyrics and Chord Charts:</h3>\n\n  <p>With ProPresenter, you can quickly import lyrics and chord charts for your songs. To start, you'll need a Chart Pro subscription from multitracks.com. This subscription provides access to digital chord sheets that you can print and import. Plus, it allows you to search and import songs directly into ProPresenter.</p>\n\n  <h3>Connecting Your Accounts:</h3>\n\n  <p>Log into your multitracks.com account within ProPresenter's preferences. This connection enables you to easily search and import songs from the multitracks database directly into ProPresenter.</p>\n\n  <h3>Searching for Songs:</h3>\n\n  <p>Use the Multi-Track Search feature to find your desired songs. Type in the song name, like 'Christ be Magnified,' and choose your preferred version. You'll get helpful details about the song, including key and chord chart availability.</p>\n\n  <h3>Importing Chord Charts:</h3>\n\n  <p>Importing is a breeze! Choose your options, such as bringing in chords and automation. Adjust the key if needed, select the number of lines per slide, and apply a theme. Then, import the song, and it's ready to go.</p>\n\n  <h3>Create an Arrangement:</h3>\n\n  <p>ProPresenter offers pre-built arrangements or the flexibility to create your own. Easily set up your song arrangement for smooth presentations.</p>\n\n  <h3>Displaying Chord Charts on Stage:</h3>\n\n  <p>Enhance your stage screens by adding a new stage layout. Choose the Multi-Track Chords and Lyrics pre-built layout, and adjust settings like chord colors and text appearance. You can even switch between different keys effortlessly.</p>\n\n  <h3>Applying the Layout:</h3>\n\n  <p>Activate your new layout for your stage screens. Preview and adjust as needed to ensure your musicians have clear chord charts displayed above the lyrics, matching your chosen key.</p>\n\n  <h3>Conclusion:</h3>\n\n  <p>With Multi-Track Search and Chord Chart features, ProPresenter streamlines the process of importing songs and displaying accurate chord charts. Visit multitracks.com to learn more and subscribe, and take your presentations to the next level!</p>\n</div>"
+  },
+  {
+    "Title": "Connecting Planning Center to Pro presenter",
+    "Tag": "Getting Started",
+    "Url": "",
+    "Description": "<div class=\"article-body\">\n<p><strong>Connecting Planning Center Services to ProPresenter</strong></p>\n\n<p>Planning Center Services is a third-party service that can be integrated with ProPresenter for seamless functionality. To set it up, follow these steps:</p>\n\n<p><strong>Step 1: Open ProPresenter Preferences</strong></p>\n\n<p>In ProPresenter, navigate to <strong>Preferences</strong> and click on the <strong>Services</strong> tab.</p>\n\n<p><img src=\"ProPresenter_7_Preferences_Services_Settings.png\" alt=\"ProPresenter_7_Preferences_Services_Settings.png\"></p>\n\n<p><strong>Step 2: Login to Planning Center</strong></p>\n\n<p>Click the <strong>Login</strong> button next to <strong>Planning Center Online</strong>.</p>\n\n<p><img src=\"ProPresenter_Planning_Center_Login.png\" alt=\"ProPresenter_Planning_Center_Login.png\"></p>\n\n<p>Enter your account information in the login window and select your organization on the next screen. If you're a member of only one organization, you'll be signed in immediately.</p>\n\n<p><strong>Step 3: Authorize ProPresenter</strong></p>\n\n<p>The first time you connect to Planning Center, you'll need to authorize ProPresenter to access your account. Click <strong>Allow</strong>.</p>\n\n<p><img src=\"Planning_Center_Authorization.png\" alt=\"Planning_Center_Authorization.png\"></p>\n\n<p><strong>Step 4: Confirmation</strong></p>\n\n<p>Once you've successfully logged into your Planning Center Services account through ProPresenter, you'll see your name and organization name displayed in ProPresenter's Preferences.</p>\n\n<p><img src=\"ProPresenter_Planning_Center_Logged_In.png\" alt=\"ProPresenter_Planning_Center_Logged_In.png\"></p>\n\n<p>We recommend using an Editor or Administrator account from your Planning Center plan for the integration.</p>\n\n<p>That's it! You've successfully connected ProPresenter to your Planning Center account.</p>\n\n</div>"
+  },
+  {
+    "Title": "Importing Planning Center Plan to Pro Presenter",
+    "Tag": "Getting Started",
+    "Url": "",
+    "Description": "<div class=\"article-body\">\n<p><strong>Adding a Planning Center Plan to ProPresenter</strong></p>\n\n<p>In this guide, we will walk you through the process of adding a Planning Center Plan to ProPresenter. We will also explore various preference settings to help you better understand their functionalities.</p>\n\n<p><strong>Prerequisites:</strong> Familiarity with using Planning Center Services is assumed.</p>\n\n<p><strong>Step 1: Add Planning Center Plan</strong></p>\n\n<p>Start by clicking the <strong>+</strong> (plus sign) next to <strong>Library</strong>, then select <strong>Planning Center Service</strong> from the menu.</p>\n\n<p><img src=\"Add_Planning_Center_Service_to_ProPresenter.png\" alt=\"Add_Planning_Center_Service_to_ProPresenter.png\"></p>\n\n<p>This opens a window displaying your available Plans. The option to <strong>Show Historical Service Plans</strong> affects which Plans are shown. Choose a Plan and click <strong>Select</strong> to add it as a playlist in ProPresenter.</p>\n\n<p><img src=\"Planning_Center_Select_a_Plan.png\" alt=\"Planning_Center_Select_a_Plan.png\"></p>\n\n<p><strong>Step 2: Link Songs in Library</strong></p>\n\n<p>When a Planning Center song is linked to a ProPresenter presentation, it appears as a normal presentation with a second title bar. This bar contains the Planning Center item name and provides the option to unlink a presentation.</p>\n\n<p><img src=\"Linked_Song.png\" alt=\"Linked_Song.png\"></p>\n\n<p>If a song is not linked, it shows a drop area. You can link a presentation from the library, a media file, or cancel the drop zone if it's just a placeholder.</p>\n\n<p><img src=\"Unlinked_Song.png\" alt=\"Unlinked_Song.png\"></p>\n\n<p>To link an existing presentation to a Planning Center item, use the Search function to locate the presentation, then drag and drop it into the drop zone.</p>\n\n<p><img src=\"Drag_Item_to_Drop_Zone.png\" alt=\"Drag_Item_to_Drop_Zone.png\"></p>\n\n<p><strong>Step 3: Matching and Complex Plans</strong></p>\n\n<p>If a Planning Center song matches a ProPresenter presentation, it will appear in the playlist as usual. Headers in Planning Center serve the same purpose as those in ProPresenter but cannot be edited. Headers organize the order.</p>\n\n<p><img src=\"Screen_Shot_2021-03-12_at_3.26.15_PM.png\" alt=\"Screen_Shot_2021-03-12_at_3.26.15_PM.png\"></p>\n\n<p>More complex Plans can be synchronized to ProPresenter using the <strong>Automatically Check for Plan Updates</strong> setting. Items without a matching ProPresenter counterpart can be linked manually.</p>\n\n<p><img src=\"Screen_Shot_2021-03-12_at_3.36.58_PM.png\" alt=\"Screen_Shot_2021-03-12_at_3.36.58_PM.png\"></p>\n\n<p><strong>Step 4: Convert to Standard Playlist</strong></p>\n\n<p>To gain more control over the playlist content and manipulate headers, right-click on a Planning Center Plan and select <strong>Convert to Standard Playlist</strong>.</p>\n\n</div>"
+    }
+    ,
+  {
+    "Title": "Connecting Playback to Pro Presenter",
+    "Tag": "Getting Started",
+    "Url": "https://www.youtube.com/embed/oB7dmAEAphE",
+    "Description": "Christian from multi-tracks.com introduces a video series on controlling ProPresenter using MIDI out from Playback. The first video covers establishing a MIDI connection between a computer running ProPresenter and an iOS device running Playback. The connection can be made over Wi-Fi or Ethernet. To establish the MIDI connection, open the Audio MIDI Setup app on the Mac running ProPresenter, create a session and name it, then ensure both devices are on the same network. On the iPad, open an app like Playback to send MIDI, and the devices will be listed in the MIDI network window. A detailed explanation is provided for Ethernet connections and using iconic connectivity devices. Once the MIDI connection is established, the devices are ready to configure for sending and receiving MIDI signals."
+  }
+]

@@ -47,21 +47,16 @@ export const CenteredContainer = styled.div`
   width:100%;
 `;
 
-export const StyledBox = styled(Box)(() => ({
+export const StyledBox = styled(Box)({
   flexGrow: 1,
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
   color: 'black',
   '& > :not(:last-child)': {
-    marginRight: '10px', // Default margin-right
+    marginRight: '10px',
   },
-  '@media (max-width: 600px)': {
-    '& > :not(:last-child)': {
-      marginRight: '5px', // Adjusted margin-right for smaller screens
-    },
-  },
-}));
+});
 
 
 export const PageHeader = styled.h1`

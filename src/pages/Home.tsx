@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -25,7 +24,7 @@ const StyledCardActionArea = styled(CardActionArea)`
 export function Home() {
   const navigateTo = useNavigate();
 
-  const handleCardClick = (pageUrl) => {
+  const handleCardClick = (pageUrl: string) => {
     navigateTo(pageUrl);
   };
 

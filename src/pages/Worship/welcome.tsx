@@ -1,6 +1,6 @@
 import MUIDrawerLeft from "../../components/LeftNavigation";
 
-const pages = ['InEars', 'PlanningCenter', 'MultiTracks'];
+const pages = ['Band', 'PlanningCenter', 'MultiTracks'];
 
 export function BandWelcome(){
     return(

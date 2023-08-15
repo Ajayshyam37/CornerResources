@@ -3,7 +3,7 @@ export const PlanningCenter = [
     "Title": "What is Planning Center Services",
     "Tag": "Getting Started",
     "Url": "https://www.youtube.com/embed/7HEMcbTp9_0",
-      "Description": "<div>\n\
+    "Description": "<div>\n\
       <p>If you're involved in planning worship services or scheduling volunteers, you know the challenges of managing multiple tasks. Enter Planning Center Services, an online app designed to simplify your workflow and enhance communication:</p>\n\n\
       <h3>Streamlined Planning:</h3>\n\n\
       <p>With Planning Center Services, you can wave goodbye to chaos and focus on the service. Use intuitive planning tools to arrange service items, estimate timings, and take comprehensive notes.</p>\n\n\
@@ -15,13 +15,13 @@ export const PlanningCenter = [
       <p>Enable your team to rehearse from anywhere, breaking geographical barriers. Revolutionize the way you plan and execute worship services with Planning Center Services.</p>\n\n\
       <p>Ready to regain control and elevate your worship planning? Start your free trial today at PlanningCenterOnline.com and experience a new level of organization and efficiency.</p>\n\n\
       </div>"
-    }
-    ,
+  }
+  ,
   {
     "Title": "Planning Center Templates",
     "Tag": "Getting Started",
-    "Url": "https://www.youtube.com/embed/KXuMVw9I8T4",
-      "Description": "<div>\n\
+    "Url": "https://www.youtube.com/embed/KXuMVw9I8T4?start=108",
+    "Description": "<div>\n\
       <p>Welcome, fellow worship leaders! Join me on a journey to enhance your worship planning with Planning Center Services. While we're not physically going anywhere today, we're diving deep into the world of worship planning from the comfort of my home office. By the way, I painted my walls to create a cozy atmosphere.</p>\n\n\
       <p>As we're already into the second week of December, some of you might be procrastinating your Christmas service planning. Fear not, because now is the perfect time to step up your game with Planning Center Services, a versatile online app that can be a game-changer in organizing your worship services.</p>\n\n\
       <p>Before we dive into the nitty-gritty, remember to check out my recent video where I share my favorite Christmas songs for inspiration. And if you have any favorites, don't hesitate to share them in the comments below.</p>\n\n\
@@ -33,13 +33,13 @@ export const PlanningCenter = [
       <p>Remember, the power of templates lies in their flexibility and potential to streamline your planning process. Whether it's organizing your connections team, adjusting needed positions, or fine-tuning service times, templates can be your go-to tool for creating seamless worship experiences.</p>\n\n\
       <p>If you found these tips helpful and want more insights into Planning Center, show your support by leaving a comment with 'More PCO.' Your feedback helps me create content that's valuable to you. Don't forget to like this video, subscribe to the channel, and hit the notification bell so you stay updated on all the exciting content I have in store, including upcoming giveaways and gear reviews. Thanks for watching, and I'll catch you in the next video!</p>\n\n\
       </div>"
-    }
-    ,
+  }
+  ,
   {
     "Title": "Adding Songs & Files with Planning Center Services",
     "Tag": "Getting Started",
     "Url": "https://www.youtube.com/embed/RzMf7VvPVno",
-      "Description": "<div>\n\
+    "Description": "<div>\n\
       <p>Welcome back, fellow musicians! Today, we're diving into the world of sharing song files with your team using Planning Center Services. So, let's get started on the songs page.</p>\n\n\
       <h3>Sharing Song Files:</h3>\n\n\
       <p>To attach files, begin by clicking the gear icon on the songs page. Make sure you've enabled integrations like SongSelect, PhraseCharts, or Rehearsal Mix – I've already got that sorted. Now, let's proceed.</p>\n\n\
@@ -60,13 +60,13 @@ export const PlanningCenter = [
       <p>If you found these tips helpful, give this video a thumbs up and consider subscribing to my channel for more valuable insights. Don't forget to hit that notification bell so you stay up to date with my upcoming content.</p>\n\n\
       <p>Thanks for joining me today, and remember, music unites us all!</p>\n\n\
       </div>"
-    }
-    ,
+  }
+  ,
   {
     "Title": "Set up teams in Planning Center",
     "Tag": "Getting Started",
     "Url": "https://www.youtube.com/embed/4ItoxEEotoY",
-      "Description": "<div>\n\
+    "Description": "<div>\n\
       <p>Let's dive into the world of team creation! Teams are the heart of your church, tailored to your unique needs and calling. Here's how to craft and curate teams and positions from the main plans page:</p>\n\n\
       <h3>Creating Teams and Positions:</h3>\n\n\
       <p>Begin by hovering over the settings icon and seamlessly transition to the teams option. Now, let's go ahead and add a team. For instance, let's create a 'Tech Team.' As the creator, you're automatically a team leader, and don't forget to add anyone overseeing scheduling as team leaders too.</p>\n\n\
@@ -83,13 +83,13 @@ export const PlanningCenter = [
       <p>The final flourish – assigning remarkable individuals to these positions. For the 'Greeter' role, it's none other than yours truly. 'Guest Services' welcomes Brandenburg with open arms. And as for 'Parking,' Jacob Tilly takes the wheel.</p>\n\n\
       <p>You've woven a masterpiece of teams and positions, primed to serve your church community. Bravo!</p>\n\n\
       </div>"
-    }
-    ,
+  }
+  ,
   {
     "Title": "Adding New People",
     "Tag": "Advanced",
-    "Url": "https://www.youtube.com/embed/jYDQgQWYgB8",
-      "Description": "<div>\n\
+    "Url": "https://www.youtube.com/embed/jYDQgQWYgB8?start=40",
+    "Description": "<div>\n\
       <p>Good morning, team leaders! Welcome to the first video in our series on how to make the most of Planning Center. In today's tutorial, we'll learn how to add new members to Planning Center and send them a welcome email, granting access to their schedules.</p>\n\n\
       <h3>Adding New Members and Sending Welcome Emails:</h3>\n\n\
       <p>Begin by logging into Planning Center at <a href='https://planningcenteronline.com'>planningcenteronline.com</a>. As registered users, you'll be directed to the familiar interface. Let's dive right in! Click on the 'People' tab at the top to reveal your list of members. On the side, you'll find the 'Add a New Person' option.</p>\n\n\
@@ -97,16 +97,28 @@ export const PlanningCenter = [
       <p>Submitting the information takes you to their profile page, where you'll find three tabs. For now, let's focus on the 'Preferences and Teams' tab. By clicking 'Add,' you can assign them to a specific team. For instance, let's add 'John Doe' to the 'Greeters' team.</p>\n\n\
       <p>If you encounter any issues with the team not appearing after adding, a simple page refresh (F5) will do the trick. Once you refresh, you'll see the 'Greeters' team assigned to 'John Doe.' You can manage their preferences within this tab, including the times they're available to serve.</p>\n\n\
       <p>Under the 'Communication' tab, members can opt into receiving text messages for alerts. Provide their phone number and other details to ensure smooth communication. The 'Details' tab allows changes in permissions, attachment of files, and more. You can also add notes, which I recommend specifying the ministry name and any relevant details to aid scheduling.</p>\n\n\
-      <p>And there you have it! That concludes our tutorial. If you have any questions, feel free to contact me at the church (232-3524) or via email at travis@flagchurch.com. Have a fantastic day!</p>\n\n\
+      <p>And there you have it! That concludes our tutorial.</p>\n\n\
       </div>"
-    }
-    ,
+  }
+  ,
   {
     "Title": "In-Depth Look into Planning Center",
     "Tag": "Advanced",
-    "Url": "https://www.youtube.com/embed/-JWrD5UhLHg",
-    "Description": ""
+    "Url": "https://www.youtube.com/embed/-JWrD5UhLHg?start=164",
+    "Description": "<div style='font-weight: bold; margin-top: 15px;'>Guide to Planning Center Services:</div>"+
+    "<p>In this YouTube video titled \"PCU: Planning Center Services - Getting Started,\" the speaker introduces Planning Center Services as a tool for worship planning, people scheduling, and team communication in ministry. The video covers adding people, permission levels, creating teams and positions, adding team members and songs, customizing the plan page appearance, and accessing help resources.</p>"+
+    "<div style='font-weight: bold; margin-top: 15px;'>Key Takeaways:</div>"+
+    "<ul style='margin-left: 20px;'>"+
+    "<li><strong>Introduction:</strong> The video introduces Planning Center Services as a versatile tool for worship planning, scheduling, and team communication.</li>"+
+    "<li><strong>Help Resources:</strong> The importance of knowing where to get help is emphasized, and the support team's availability is highlighted.</li>"+
+    "<li><strong>Adding People:</strong> Adding people to the database is crucial for scheduling and overseeing events. Users can enter contact information and profile pictures, and import data from other sources.</li>"+
+    "<li><strong>Permission Levels:</strong> Different permission levels (Viewer, Scheduler, Editor, Administrator) offer varying access and editing capabilities.</li>"+
+    "<li><strong>Teams and Positions:</strong> Creating teams and assigning positions enhances communication and utilization of features. Different types of teams can be customized to fit ministry needs.</li>"+
+    "<li><strong>Adding Team Members and Songs:</strong> Step-by-step guide on adding individuals, songs, and importing popular songs. Custom songs can also be added along with lyrics and chords.</li>"+
+    "<li><strong>Customizing Elements:</strong> Adding countdowns, section headers, worship setlists, announcements, and more to the plan page. Quick Add and notes section for assigning people.</li>"+
+    "<li><strong>Custom Item Row Colors:</strong> Personalizing the appearance of the plan page by changing colors of headers, items, and announcements.</li>"+
+    "</ul>"
+
   }
 ]
 
-  

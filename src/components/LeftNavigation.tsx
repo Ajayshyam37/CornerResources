@@ -7,7 +7,6 @@ import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -22,7 +21,7 @@ import { Link } from 'react-router-dom';
 import { Audio } from '../assets/Audio';
 import { Video } from '../assets/Video';
 import { Lights } from '../assets/Lights';
-import { InEars } from '../assets/InEars';
+import { Band } from '../assets/Band';
 import { PlanningCenter } from '../assets/PlanningCenter';
 import { MultiTracks } from '../assets/MultiTracks';
 
@@ -30,7 +29,7 @@ import { useEffect } from 'react';
 import { CenteredTitle, PageDescription, PageHeader, RoundedRectangle, selectedButtonStyles, StyledBox, StyledHeading3, TagsText } from './pageStyles';
 import Grid from '@mui/material/Grid';
 
-const drawerWidth = 240;
+const drawerWidth = 340;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
     open?: boolean;
@@ -87,11 +86,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
-    const [selectedItem, setSelectedItem] = React.useState<string | null>(null);
-    const [selectedDescription, setSelectedDescription] = React.useState<string | null>(null);
-    const [selectedTags, setSelectedTags] = React.useState<string | null>(null);
-    const [selectedURL, setSelectedURL] = React.useState<string | null>(null);
-    const [selectedPage, setSelectedPage] = React.useState<string | null>(null);
+    const [selectedItem, setSelectedItem] = React.useState<string | undefined>(undefined);
+    const [selectedDescription, setSelectedDescription] = React.useState<string | TrustedHTML>("");
+    const [selectedTags, setSelectedTags] = React.useState<string | undefined>(undefined);
+    const [selectedURL, setSelectedURL] = React.useState<string | undefined>(undefined);
+    const [selectedPage, setSelectedPage] = React.useState<string | undefined>(undefined);
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -122,8 +121,8 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
             handleItemClick(Video[0]);
         } else if (x === 'Lights') {
             handleItemClick(Lights[0]);
-        } else if (x === 'InEars') {
-            handleItemClick(InEars[0]);
+        } else if (x === 'Band') {
+            handleItemClick(Band[0]);
         } else if (x === 'PlanningCenter') {
             handleItemClick(PlanningCenter[0]);
         } else if (x === 'MultiTracks') {
@@ -139,8 +138,8 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
         jsonData = Video;
     } else if (selectedPage === 'Lights') {
         jsonData = Lights;
-    } else if (selectedPage === 'InEars') {
-        jsonData = InEars;
+    } else if (selectedPage === 'Band') {
+        jsonData = Band;
     } else if (selectedPage === 'PlanningCenter') {
         jsonData = PlanningCenter;
     } else if (selectedPage === 'MultiTracks') {
@@ -162,12 +161,12 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                         <MenuIcon />
                     </IconButton>
                     <Grid container spacing={0}>
-                        <Grid item xs={12} md={8}>
+                        <Grid item md={8} sm={8} xs={12}>
                             <StyledHeading3>Corner Resources</StyledHeading3>
                         </Grid>
-                        <Grid item xs={12} md={4}>
+                        <Grid item md={4} sm={4} xs={12}>
                             <StyledBox>
-                                {props.tabs.map((page, index) => (
+                                {props.tabs.map((page) => (
                                     <Button
                                     variant="text"
                                         key={page}
@@ -194,6 +193,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                 </Toolbar>
             </AppBar>
             <Drawer
+            
                 sx={{
                     width: drawerWidth,
                     flexShrink: 0,
@@ -215,7 +215,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                 <Divider />
                 <List>
                     <ListItem key={'Home'} disablePadding>
-                        <ListItemButton button component={Link} to="/">
+                        <ListItemButton component={Link} to="/">
                             <ListItemText primary={'Home'} />
                         </ListItemButton>
                     </ListItem>
@@ -234,12 +234,12 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
             <Main open={open}>
                 <DrawerHeader />
                 <Grid container>
-                    <Grid item xs={12} md = {8}>
+                    <Grid item xs={12} md={8}>
                         <PageHeader>
                             {selectedItem}
                         </PageHeader>
                     </Grid>
-                    <Grid item xs={12} md= {4}>
+                    <Grid item xs={12} md={4}>
                         <RoundedRectangle>
                             <TagsText>{selectedTags}</TagsText>
                         </RoundedRectangle>
@@ -253,7 +253,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                         src={selectedURL}
                         title={selectedItem}
                         frameBorder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; gyroscope; fullscreen;"
+                        allow=" encrypted-media; gyroscope; fullscreen;"
                     />
                 )}
                 <PageDescription>

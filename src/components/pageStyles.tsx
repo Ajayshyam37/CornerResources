@@ -83,6 +83,7 @@ export const PageDescription = styled.p`
   margin-bottom: 20px;
   font-family: 'Exo', sans-serif;
   
+  
   @media (max-width: 600px) {
     font-size: 14px; // Adjusted font size for smaller screens
   }

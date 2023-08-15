@@ -1,8 +1,6 @@
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
-import { Header } from "./components/pageStyles";
-
 import './index.css'
 
 import { Home } from "./pages/Home";
@@ -13,6 +11,7 @@ import { BandWelcome } from "./pages/Worship/welcome";
 function App() {
   return (
     <>
+    <Container>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -20,6 +19,7 @@ function App() {
             <Route path="/Worship/Welcome" element={<BandWelcome />} />
           </Routes>
         </BrowserRouter>
+    </Container>    
     </>
   );
 }

@@ -4,6 +4,6 @@ const pages = ['Audio', 'Video', 'Lights'];
 
 export function TechWelcome(){
     return(
-        <MUIDrawerLeft tabs={pages}/>
+        <MUIDrawerLeft tabs={pages} title="Tech Team"/>
     );
 }

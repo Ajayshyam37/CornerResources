@@ -18,12 +18,12 @@ import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
-import { Audio } from '../assets/Audio';
-import { Video } from '../assets/Video';
-import { Lights } from '../assets/Lights';
-import { Band } from '../assets/Band';
-import { PlanningCenter } from '../assets/PlanningCenter';
-import { MultiTracks } from '../assets/MultiTracks';
+import { Audio } from '../../public/assets/Audio';
+import { Video } from '../../public/assets/Video';
+import { Lights } from '../../public/assets/Lights';
+import { Band } from '../../public/assets/Band';
+import { PlanningCenter } from '../../public/assets/PlanningCenter';
+import { MultiTracks } from '../../public/assets/MultiTracks';
 
 import { useEffect } from 'react';
 import { CenteredTitle, PageDescription, PageHeader, RoundedRectangle, selectedButtonStyles, StyledBox, StyledHeading3, TagsText } from './pageStyles';

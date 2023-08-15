@@ -219,7 +219,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                             <ListItemText primary={'Home'} />
                         </ListItemButton>
                     </ListItem>
-                    {!jsonData || jsonData.map((item) => (
+                    {!jsonData || jsonData.map((item: { Title: string; Description: string; Tag: string; Url: string }) => (
                         <ListItem key={item.Title} disablePadding>
                             <ListItemButton
                                 onClick={() => handleItemClick(item)}

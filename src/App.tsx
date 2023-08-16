@@ -1,4 +1,4 @@
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { Routes, BrowserRouter, Route , Navigate} from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 import './index.css'
@@ -17,6 +17,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Tech/Welcome" element={<TechWelcome />} />
             <Route path="/Worship/Welcome" element={<BandWelcome />} />
+            <Route
+      path="*"
+      element={<Navigate to="/" replace={true} />}
+    />
           </Routes>
         </BrowserRouter>
     </Container>    

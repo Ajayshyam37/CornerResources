@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Toolbar from '@mui/material/Toolbar';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,8 +10,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import CloseIcon from '@mui/icons-material/Close';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -29,7 +28,7 @@ import { useEffect } from 'react';
 import { CenteredTitle, PageDescription, PageHeader, RoundedRectangle, selectedButtonStyles, StyledBox, StyledHeading3, TagsText } from './pageStyles';
 import Grid from '@mui/material/Grid';
 
-const drawerWidth = 340;
+const drawerWidth = 300;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
     open?: boolean;
@@ -40,7 +39,6 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: `-${drawerWidth}px`,
     marginTop: 15,
     ...(open && {
         transition: theme.transitions.create('margin', {
@@ -49,6 +47,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
         }),
         marginLeft: 0,
     }),
+    blur : 15
 }));
 
 interface AppBarProps extends MuiAppBarProps {
@@ -83,14 +82,18 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
 }));
 
-export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) {
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+const iOS =
+  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+
+export default function MUIDrawerLeft(props: { tabs: string[]; title: string ;}) {
+    const [open, setOpen] = React.useState(false);
     const [selectedItem, setSelectedItem] = React.useState<string | undefined>(undefined);
     const [selectedDescription, setSelectedDescription] = React.useState<string | TrustedHTML>("");
     const [selectedTags, setSelectedTags] = React.useState<string | undefined>(undefined);
     const [selectedURL, setSelectedURL] = React.useState<string | undefined>(undefined);
-    const [selectedPage, setSelectedPage] = React.useState<string | undefined>(undefined);
+    const [selectedPage, setSelectedPage] = React.useState<string>('');
+
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -99,37 +102,74 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
     };
 
     useEffect(() => {
-        // Automatically select the first item when the component mounts
-        if (props.tabs.length > 0) {
-            let x = props.tabs[0];
-            handlePageClick(x);
+        // Check if there is a stored selection in local storage
+        const storedSelectedItem = localStorage.getItem(`${props.title}_selectedItem`);
+        const storedSelectedPage = localStorage.getItem(`${props.title}_selectedPage`);
+    
+    
+        // If there is a stored selection, use it
+        if (storedSelectedItem && storedSelectedPage) {
+            const selectedItemData = JSON.parse(storedSelectedItem);
+            setSelectedItem(selectedItemData.Title);
+            setSelectedDescription(selectedItemData.Description);
+            setSelectedTags(selectedItemData.Tag);
+            setSelectedURL(selectedItemData.Url);
+            setSelectedPage(storedSelectedPage);
+        } else {
+            // Otherwise, automatically select the first item
+            if (props.tabs.length > 0) {
+                let x = props.tabs[0];
+                handlePageClick(x);
+            }
         }
-    }, []);
-
+    }, [props.tabs]);
+    
     const handleItemClick = (item: { Title: string; Description: string; Tag: string; Url: string }) => {
         setSelectedItem(item.Title);
         setSelectedDescription(item.Description);
         setSelectedTags(item.Tag);
         setSelectedURL(item.Url);
+    
+        // Store the selected item data in local storage
+        const selectedItemData = {
+            Title: item.Title,
+            Description: item.Description,
+            Tag: item.Tag,
+            Url: item.Url,
+            Page: selectedPage, // Store the selected page as well
+        };
+        localStorage.setItem(`${props.title}_selectedItem`, JSON.stringify(selectedItemData));
+        localStorage.setItem(`${props.title}_selectedPage`, selectedPage);
     };
-
+    
     const handlePageClick = (x: string) => {
         setSelectedPage(x);
+    
+        // Update your data arrays accordingly
+        let jsonData;
         if (x === 'Audio') {
-            handleItemClick(Audio[0]);
+            jsonData = Audio;
         } else if (x === 'Video') {
-            handleItemClick(Video[0]);
+            jsonData = Video;
         } else if (x === 'Lights') {
-            handleItemClick(Lights[0]);
+            jsonData = Lights;
         } else if (x === 'Band') {
-            handleItemClick(Band[0]);
+            jsonData = Band;
         } else if (x === 'PlanningCenter') {
-            handleItemClick(PlanningCenter[0]);
+            jsonData = PlanningCenter;
         } else if (x === 'MultiTracks') {
-            handleItemClick(MultiTracks[0]);
+            jsonData = MultiTracks;
         }
+    
+        // Automatically select the first item from the data array
+        if (jsonData && jsonData.length > 0) {
+            handleItemClick(jsonData[0]);
+        }
+    
+        // Store the selected page in local storage
+        localStorage.setItem(`${props.title}_selectedPage`, x);
     };
-
+    
     // Determine which JSON data to use based on the selected page
     let jsonData;
     if (selectedPage === 'Audio') {
@@ -144,7 +184,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
         jsonData = PlanningCenter;
     } else if (selectedPage === 'MultiTracks') {
         jsonData = MultiTracks;
-    }
+    }    
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -168,17 +208,17 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                             <StyledBox>
                                 {props.tabs.map((page) => (
                                     <Button
-                                    variant="text"
+                                        variant="text"
                                         key={page}
                                         sx={{
                                             color: 'black',
                                             backgroundColor: selectedPage === page ? 'rgba(0, 0, 0, 0.1)' : 'transparent',
                                             height: '40px',
-                                            marginTop:'15px',
+                                            marginTop: '15px',
                                             '@media (max-width: 600px)': {
                                                 height: '24px',
                                                 fontSize: '10px',
-                                                margin:'0px'
+                                                margin: '0px'
                                             },
                                         }}
                                         onClick={() => handlePageClick(page)}
@@ -192,8 +232,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                     </Grid>
                 </Toolbar>
             </AppBar>
-            <Drawer
-            
+            <SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS}
                 sx={{
                     width: drawerWidth,
                     flexShrink: 0,
@@ -202,14 +241,16 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                         boxSizing: 'border-box',
                     },
                 }}
-                variant="persistent"
                 anchor="left"
                 open={open}
+                onBackdropClick={handleDrawerClose}
+                onOpen={handleDrawerOpen}
+                onClose={handleDrawerClose}
             >
                 <DrawerHeader>
                     <CenteredTitle>{props.title}</CenteredTitle>
                     <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                        <CloseIcon/>
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
@@ -222,7 +263,10 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                     {!jsonData || jsonData.map((item: { Title: string; Description: string; Tag: string; Url: string }) => (
                         <ListItem key={item.Title} disablePadding>
                             <ListItemButton
-                                onClick={() => handleItemClick(item)}
+                                onClick={() => {
+                                    handleItemClick(item);
+                                    handleDrawerClose();
+                                }}                                
                                 style={selectedItem === item.Title ? selectedButtonStyles : {}}
                             >
                                 <ListItemText primary={item.Title} />
@@ -230,7 +274,7 @@ export default function MUIDrawerLeft(props: { tabs: string[]; title: string }) 
                         </ListItem>
                     ))}
                 </List>
-            </Drawer>
+            </SwipeableDrawer>
             <Main open={open}>
                 <DrawerHeader />
                 <Grid container>

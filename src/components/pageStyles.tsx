@@ -86,7 +86,6 @@ export const PageDescription = styled.p`
 
 
 export const selectedButtonStyles = {
-  
   color:'#FF8F00',
   fontWeight: 'bold',
 };
